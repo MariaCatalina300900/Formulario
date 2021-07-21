@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#videoBG{
+    position:fixed;/*El video quedó centrado en la pagina*/
+    z-index: -1;/*hace que el video quede al fondo*/
+    width:100%;
+    height:auto;
+}
+.formulario{
+    display:grid;
+    grid-template-columns: 1fr 1fr;/*ubicarlo en columnas*/
+    gap:20px;/*Espacio entre los elementos*/
+}
+.formulario__label{/*Caracteristicas de los titulos*/
+    display:block;
+    font-weight:700;
+    padding:10px;
+    cursor:pointer;
+    /*color:rgb(205, 115, 92);*/
+}
+.formulario__grupo-input{
+    position: relative;
+}
+
+.formulario{
+    width: 650px;
+    background: #24303c;
+    padding:30px;
+    margin:auto;
+    margin-top:100px;/**/
+    border-radius:4px;
+    font-family:'calibri';
+    color:white;
+    box-shadow:7px 13px 37px ;
+}
+
+.formulario h4 {/*Modifica el titulo*/
+    font-size: 30px;
+    margin-bottom:20px;
+    color:#F66060;
+    text-align: center
+}
+
+.formulario__input{
+    width:100%;
+    background: #394e61;
+    border: 3px solid transparent;
+    padding: 0 40px 0 10px;
+    border-radius:3px;
+    margin-bottom: 16px;/*separacion de los textos*/
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size:18px;
+    color:white; /*Color del texto al escribir*/
+    height: 45px;
+    line-height:45;
+    transition: .3s ease all;
+}
+
+.formulario p{
+    height: 40px;
+    text-align:center;
+    /*font-size:18px;*/
+}
+
+.formulario__input-error{/*Error en la casilla*/
+    font-size:12px;
+    margin-bottom:0;
+    display:none;
+} 
+
+.formulario__input-errorn{/* Cuando la casilla esta vacia*/
+    font-size:12px;
+    margin-bottom:0;
+    display:none;
+} 
+
+.formulario__input-error-activo {
+    display:block;
+}
+
+.formulario__validacion-estado{/*Simbolos de error*/
+    position:absolute;
+    right:10px;
+    bottom:28px;
+    z-index:100;
+    font-size:16px;
+    opacity:0;/*Para que no se muestren las "x "*/
+}
+.formulario__checkbox{
+    margin-right:10px;
+}
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar{
+    grid-column: span 2;
+}
+
+.formulario__mensaje{
+    height:45px;
+    line-height: 45px;
+    background: #F66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display:none;
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+.formulario__mensaje p{
+    margin:0;
+}
+
+.formulario a{
+    color:white;
+    text-decoration:none;
+}
+
+.formulario a:hover{
+    color:white;
+    text-decoration:underline;
+
+}
+.formulario__mensaje-exito{
+    font-size:14px;
+    color: #119200;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo{
+    display:block;
+}
+
+.formulario .fomulario__btn{
+    width:100%;
+    background: #1f53c5;
+    border: none;
+    padding:12px;
+    color:white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    border :0;
+}
+
+.fomulario__btn:hover{
+    background-color: #14929b; /*Hace que cambie de color cuando el cursor esté sobre el boton*/
+}
+
+@media (max-width: 1300px) {
+    #videoBG{
+        height:100%;
+        width:auto;
+    }
+}
+.formulario__grupo-correcto .formulario__validacion-estado{/*cambia el color de la X cuando esta correcto*/
+    color:#1ed12d;
+    opacity:1;
+}
+.formulario__grupo-incorrecto .formulario__label{ /*cambia el color del nombre cuando es incorrecto*/
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{/*cambia el color de la X cuando esta incorrecto*/
+    color:#bb2929;
+    opacity:1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{/*cambia el color del recuadro cuando esta incorrecto*/
+    border: 3px solid #bb2929;
+}
+
